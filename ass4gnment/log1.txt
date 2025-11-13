@@ -1,0 +1,119 @@
+ExeStack:
+   (Ref(Int) v;(new(v, 20);(Ref(Ref(Int)) a;(new(a, v);(print(v);print(a))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+=========================================
+ExeStack:
+   Ref(Int) v
+   (new(v, 20);(Ref(Ref(Int)) a;(new(a, v);(print(v);print(a)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+=========================================
+ExeStack:
+   (new(v, 20);(Ref(Ref(Int)) a;(new(a, v);(print(v);print(a)))))
+SymTable:
+   v --> (0, Int)
+Out:
+FileTable:
+Heap:
+=========================================
+ExeStack:
+   new(v, 20)
+   (Ref(Ref(Int)) a;(new(a, v);(print(v);print(a))))
+SymTable:
+   v --> (0, Int)
+Out:
+FileTable:
+Heap:
+=========================================
+ExeStack:
+   (Ref(Ref(Int)) a;(new(a, v);(print(v);print(a))))
+SymTable:
+   v --> (1, Int)
+Out:
+FileTable:
+Heap:
+   1 --> 20
+=========================================
+ExeStack:
+   Ref(Ref(Int)) a
+   (new(a, v);(print(v);print(a)))
+SymTable:
+   v --> (1, Int)
+Out:
+FileTable:
+Heap:
+   1 --> 20
+=========================================
+ExeStack:
+   (new(a, v);(print(v);print(a)))
+SymTable:
+   a --> (0, Ref(Int))
+   v --> (1, Int)
+Out:
+FileTable:
+Heap:
+   1 --> 20
+=========================================
+ExeStack:
+   new(a, v)
+   (print(v);print(a))
+SymTable:
+   a --> (0, Ref(Int))
+   v --> (1, Int)
+Out:
+FileTable:
+Heap:
+   1 --> 20
+=========================================
+ExeStack:
+   (print(v);print(a))
+SymTable:
+   a --> (2, Ref(Int))
+   v --> (1, Int)
+Out:
+FileTable:
+Heap:
+   1 --> 20
+   2 --> (1, Int)
+=========================================
+ExeStack:
+   print(v)
+   print(a)
+SymTable:
+   a --> (2, Ref(Int))
+   v --> (1, Int)
+Out:
+FileTable:
+Heap:
+   1 --> 20
+   2 --> (1, Int)
+=========================================
+ExeStack:
+   print(a)
+SymTable:
+   a --> (2, Ref(Int))
+   v --> (1, Int)
+Out:
+   (1, Int)
+FileTable:
+Heap:
+   1 --> 20
+   2 --> (1, Int)
+=========================================
+ExeStack:
+SymTable:
+   a --> (2, Ref(Int))
+   v --> (1, Int)
+Out:
+   (1, Int)
+   (2, Ref(Int))
+FileTable:
+Heap:
+   1 --> 20
+   2 --> (1, Int)
+=========================================

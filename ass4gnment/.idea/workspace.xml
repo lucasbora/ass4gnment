@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec477bd7-a08d-4d95-b062-37cdc7afa24b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/ADTException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/DictionaryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/ExpressionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/InterpreterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/ListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/MyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/StackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/StatementException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/ArithExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/ConstantValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/IExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/LogicExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/ReadHeapExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/RelationalExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/exp/VariableExp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/AssignStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/CloseRFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/CompStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/IStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/IfStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/NewStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/NoOPStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/OpenRFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/PrintStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/ReadFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/VarDeclStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/WhileStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statement/WriteHeapStmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/type/BoolType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/type/IType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/type/IntType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/type/RefType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/type/StringType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/value/BoolValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/value/IValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/value/IntValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/value/RefValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/value/StringValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/IRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/PrgState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/IDict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/IHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/IList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/IStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/MyDict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/MyHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/MyStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ExitCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Main3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/RunExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/TextMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "lucasbora"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/lucasbora/ass2gnment.git",
+    "accountId": "421e8e39-6556-4758-90e0-9dcd1b0ef589"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="34NRDQMyeuUUmeZhXcnSYQPusR1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Main3.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/MAP/ass2gnment/src/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model.type" />
+      <recent name="model.state" />
+      <recent name="model.statement" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec477bd7-a08d-4d95-b062-37cdc7afa24b" name="Changes" comment="" />
+      <created>1761051924451</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761051924451</updated>
+    </task>
+    <servers />
+  </component>
+</project>
