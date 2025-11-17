@@ -34,7 +34,7 @@ public class Controller {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    private List<Integer> getAddrFromSymTable(Collection<IValue> symTableValues) {
+    private List<Integer> getAddrFromValues(Collection<IValue> symTableValues) {
         return symTableValues.stream()
                 .filter(v -> v instanceof RefValue)
                 .map(v -> ((RefValue) v).getAddr())
@@ -56,15 +56,47 @@ public class Controller {
         return currentStmt.execute(prg);
     }
 
+    // CHANGE 2: Add the iterative garbage collection logic
+    private List<Integer> getReachableAddresses(Collection<IValue> symTableValues, Map<Integer, IValue> heap) {
+        // 1. Start with addresses directly from the root set (Symbol Table)
+        Collection<Integer> reachable = new java.util.HashSet<>(getAddrFromValues(symTableValues));
+
+        int sizeBefore = 0;
+
+        // Iterate until no new addresses are found (the set size stops growing)
+        while (sizeBefore != reachable.size()) {
+            sizeBefore = reachable.size();
+
+            // Collect all IValue objects that are currently known to be reachable
+            Collection<IValue> currentReachableValues = reachable.stream()
+                    .filter(heap::containsKey) // Ensure the address is still in the current heap
+                    .map(heap::get)
+                    .collect(Collectors.toList());
+
+            // Find any *new* addresses referenced by these reachable values
+            List<Integer> newAddresses = getAddrFromValues(currentReachableValues);
+
+            // Add the new addresses to the set
+            reachable.addAll(newAddresses);
+        }
+
+        // Return the final list of all reachable addresses
+        return new java.util.ArrayList<>(reachable);
+    }
+
     public void allSteps() throws MyException, ExpressionException, DictionaryException {
         PrgState currentPrg = repo.getCurrentPrg();
         repo.logPrgStateExec(); // log initial state
 
         while (!currentPrg.getExeStack().isEmpty()) {
             oneStep(currentPrg);
+            // NEW GARBAGE COLLECTION LOGIC:
             currentPrg.getHeap().setContent(
                     unsafeGarbageCollector(
-                            getAddrFromSymTable(currentPrg.getSymTable().getContent().values()),
+                            getReachableAddresses( // Use the new method to find all addresses
+                                    currentPrg.getSymTable().getContent().values(),
+                                    currentPrg.getHeap().getContent()
+                            ),
                             currentPrg.getHeap().getContent()
                     )
             );

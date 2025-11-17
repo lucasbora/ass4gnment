@@ -24,14 +24,18 @@ public class Main3 {
                                 new CompStmt(
                                         new NewStmt("a", new VariableExp("v")),
                                         new CompStmt(
-                                                new PrintStmt(new VariableExp("v")),
-                                                new PrintStmt(new VariableExp("a"))
+                                                new NewStmt("v",new ConstantValue(new IntValue(30))),
+                                                new CompStmt(
+                                                        new PrintStmt(new ReadHeapExp(new VariableExp("v"))),
+                                                        new PrintStmt(new ReadHeapExp(new ReadHeapExp(new VariableExp("a"))))
+                                                )
                                         )
+
                                 )
                         )
                 )
         );
-
+// eroare in read heap + garbage collector to check the heap when it deletes
         // --- Program 2: Read heap ---
         // Ref int v; new(v, 20); Ref Ref int a; new(a, v); print(rH(v)); print(rH(rH(a)) + 5)
         IStmt ex2 = new CompStmt(
